@@ -1,66 +1,102 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    background:#0c1025;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0c1025;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
-.login-container{
-    width:350px;
-    background:#161b36;
-    padding:40px;
-    border-radius:20px;
-    text-align:center;
-    color:white;
-    box-shadow:0 0 20px rgba(0,0,0,0.3);
+/* IMAGEM DE FUNDO */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url("c:\\Users\\mateu\\Downloads\\WhatsApp Image 2026-09-09 at 23.19.48.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.20;
+
+    z-index: -1;
 }
 
-.login-container h1{
-    margin-bottom:30px;
+.login-container {
+    width: 100%;
+    max-width: 350px;
+    background: #161b36;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-input{
-    width:100%;
-    padding:12px;
-    margin-bottom:15px;
-    border:none;
-    border-radius:10px;
-    background:#252c50;
-    color:white;
+.login-container h1 {
+    margin-bottom: 30px;
 }
 
-input::placeholder{
-    color:#bdbdbd;
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #252c50;
+    color: white;
 }
 
-button{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:10px;
-    background:linear-gradient(90deg,#c2000a,#9b6dff);
-    color:white;
-    font-size:16px;
-    cursor:pointer;
+input::placeholder {
+    color: #bdbdbd;
 }
 
-button:hover{
-    opacity:0.9;
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #212ff1, #9b6dff);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-p{
-    margin-top:20px;
+button:hover {
+    opacity: 0.9;
 }
 
-a{
-    color:#8fa7ff;
-    text-decoration:none;
+p {
+    margin-top: 20px;
+}
+
+a {
+    color: #8fa7ff;
+    text-decoration: none;
+}
+
+/* CELULAR */
+@media (max-width: 480px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .login-container {
+        padding: 30px 20px;
+    }
+
+    .login-container h1 {
+        font-size: 26px;
+    }
 }
