@@ -1,122 +1,719 @@
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+/* Remove as margens e espaçamentos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+
+    /* Faz o padding e a borda entrarem no tamanho total
+       do elemento */
+    box-sizing: border-box;
+
+    /* Define a fonte principal do sistema */
+    font-family: Arial, sans-serif;
 }
 
-body{
-    display:flex;
-    min-height:100vh;
-    background:#0c1025;
-    color:white;
+
+/* =========================================================
+   CORPO DA PÁGINA
+   ========================================================= */
+
+body {
+
+    /* Coloca os elementos lado a lado */
+    display: flex;
+
+    /* Faz o site ocupar no mínimo toda a altura da tela */
+    min-height: 100vh;
+
+    /* Cor de fundo principal */
+    background: #0c1025;
+
+    /* Cor padrão dos textos */
+    color: white;
 }
 
-/* Menu lateral */
-.sidebar{
-    width:250px;
-    background:#11152d;
-    padding:30px;
+
+/* =========================================================
+   MENU LATERAL
+   ========================================================= */
+
+/* Configura a barra lateral */
+.sidebar {
+
+    /* Largura do menu */
+    width: 250px;
+
+    /* Cor de fundo do menu */
+    background: #11152d;
+
+    /* Espaçamento interno */
+    padding: 30px;
+
+    /* Organiza os elementos um abaixo do outro */
+    display: flex;
+    flex-direction: column;
 }
 
-.sidebar h2{
-    margin-bottom:40px;
+
+/* Título "Pomodoro Flow" */
+.sidebar h2 {
+
+    /* Cria espaço abaixo do título */
+    margin-bottom: 40px;
 }
 
-.sidebar ul{
-    list-style:none;
+
+/* Remove os marcadores da lista */
+.sidebar ul {
+    list-style: none;
 }
 
-.sidebar li{
-    padding:15px;
-    margin-bottom:10px;
-    border-radius:10px;
-    cursor:pointer;
+
+/* Cada item do menu */
+.sidebar li {
+
+    /* Espaçamento interno */
+    padding: 15px;
+
+    /* Espaço entre os itens */
+    margin-bottom: 10px;
+
+    /* Arredonda os cantos */
+    border-radius: 10px;
+
+    /* Mostra a mão do mouse */
+    cursor: pointer;
+
+    /* Deixa as mudanças mais suaves */
+    transition: 0.2s;
 }
 
-.sidebar .ativo{
-    background:#1e2a5a;
+
+/* Efeito quando o mouse passa sobre um item */
+.sidebar li:hover {
+
+    /* Muda a cor do fundo */
+    background: #192143;
 }
 
-/* Conteúdo principal */
-.conteudo{
-    flex:1;
-    padding:40px;
+
+/* Item atualmente selecionado */
+.sidebar .ativo {
+
+    /* Destaca o item ativo */
+    background: #1e2a5a;
 }
 
-.conteudo h1{
-    margin-bottom:30px;
+
+/* =========================================================
+   CAIXA DO USUÁRIO
+   ========================================================= */
+
+/* Área que contém o usuário */
+.perfil {
+
+    /* Empurra o perfil para a parte inferior
+       do menu lateral */
+    margin-top: auto;
+
+    /* Espaçamento interno */
+    padding: 14px;
+
+    /* Cor do fundo */
+    background: #161b36;
+
+    /* Borda ao redor do perfil */
+    border: 1px solid #292f55;
+
+    /* Cantos arredondados */
+    border-radius: 12px;
+
+    /* Coloca avatar e informações lado a lado */
+    display: flex;
+    align-items: center;
+
+    /* Espaço entre o avatar e o texto */
+    gap: 12px;
 }
 
-.timer-box{
-    background:#161b36;
-    padding:40px;
-    border-radius:20px;
-    text-align:center;
+
+/* Círculo do avatar */
+.avatar {
+
+    /* Largura do avatar */
+    width: 42px;
+
+    /* Altura do avatar */
+    height: 42px;
+
+    /* Deixa o avatar redondo */
+    border-radius: 50%;
+
+    /* Cor de fundo */
+    background: #252c50;
+
+    /* Centraliza o emoji */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Tamanho do emoji */
+    font-size: 20px;
 }
 
-.abas{
-    margin-bottom:30px;
+
+/* Nome do usuário */
+.dados-usuario strong {
+
+    /* Faz o texto ocupar uma linha própria */
+    display: block;
+
+    /* Tamanho da fonte */
+    font-size: 14px;
 }
 
-.abas button{
-    padding:10px 20px;
-    border:none;
-    border-radius:20px;
-    margin:5px;
-    background:#252c50;
-    color:white; 
+
+/* Texto abaixo do nome */
+.dados-usuario span {
+
+    /* Faz o texto ocupar uma linha própria */
+    display: block;
+
+    /* Espaço entre o nome e o texto */
+    margin-top: 4px;
+
+    /* Cor mais fraca */
+    color: #858eaf;
+
+    /* Tamanho pequeno */
+    font-size: 11px;
 }
 
-.timer-box h2{
-    font-size:100px;
-    margin-bottom:30px;
+
+/* =========================================================
+   BOTÃO SAIR
+   ========================================================= */
+
+.btn-sair {
+
+    /* Ocupa toda a largura disponível */
+    width: 100%;
+
+    /* Espaço acima do botão */
+    margin-top: 10px;
+
+    /* Espaçamento interno */
+    padding: 11px;
+
+    /* Borda */
+    border: 1px solid #292f55;
+
+    /* Arredonda os cantos */
+    border-radius: 9px;
+
+    /* Fundo transparente */
+    background: transparent;
+
+    /* Cor do texto */
+    color: #aeb5d0;
+
+    /* Cursor de mão */
+    cursor: pointer;
+
+    /* Animação suave */
+    transition: 0.2s;
 }
 
-.btn-iniciar{
-    padding:15px 50px;
-    border:none;
-    border-radius:30px;
-    background:linear-gradient(90deg,#7b61ff,#9f6fff);
-    color:white;
-    font-size:20px;
-    cursor:pointer;
+
+/* Efeito ao passar o mouse no botão sair */
+.btn-sair:hover {
+
+    /* Muda o fundo */
+    background: #1e2647;
+
+    /* Deixa o texto branco */
+    color: white;
 }
 
-/* Estatísticas */
-.estatisticas{
-    display:flex;
-    gap:20px;
-    margin-top:30px;
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+   ========================================================= */
+
+.conteudo {
+
+    /* Ocupa todo o espaço disponível */
+    flex: 1;
+
+    /* Espaçamento interno */
+    padding: 40px;
 }
 
-.card{
-    flex:1;
-    background:#161b36;
-    padding:25px;
-    border-radius:15px;
+
+/* Título principal */
+.conteudo h1 {
+
+    /* Espaço abaixo do título */
+    margin-bottom: 30px;
 }
 
-.card p{
-    font-size:28px;
-    font-weight:bold;
-    margin-top:10px;
+
+/* =========================================================
+   CAIXA DO TIMER
+   ========================================================= */
+
+.timer-box {
+
+    /* Cor de fundo */
+    background: #161b36;
+
+    /* Espaçamento interno */
+    padding: 40px;
+
+    /* Cantos arredondados */
+    border-radius: 20px;
+
+    /* Centraliza os elementos */
+    text-align: center;
 }
 
-/* Tarefas */
-.tarefas{
-    width:350px;
-    background:#11152d;
-    padding:30px;
+
+/* =========================================================
+   ABAS DO TIMER
+   ========================================================= */
+
+/* Área que contém os botões Foco e Pausa */
+.abas {
+
+    /* Espaço abaixo das abas */
+    margin-bottom: 30px;
 }
 
-.tarefas h2{
-    margin-bottom:20px;
+
+/* Botões das abas */
+.abas button {
+
+    /* Espaçamento vertical e horizontal */
+    padding: 10px 20px;
+
+    /* Remove a borda padrão */
+    border: none;
+
+    /* Deixa os botões arredondados */
+    border-radius: 20px;
+
+    /* Espaço entre os botões */
+    margin: 5px;
+
+    /* Cor do fundo */
+    background: #252c50;
+
+    /* Cor do texto */
+    color: white;
+
+    /* Cursor de mão */
+    cursor: pointer;
+
+    /* Animação */
+    transition: 0.2s;
 }
 
-.tarefa{
-    padding:20px 0;
-    border-bottom:1px solid #2c335f;
+
+/* Efeito ao passar o mouse nas abas */
+.abas button:hover {
+
+    /* Muda o fundo */
+    background: #303a68;
 }
 
+
+/* =========================================================
+   NÚMERO DO TIMER
+   ========================================================= */
+
+.timer-box h2 {
+
+    /* Tamanho grande para o tempo */
+    font-size: 100px;
+
+    /* Espaço abaixo do timer */
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   BOTÃO INICIAR
+   ========================================================= */
+
+.btn-iniciar {
+
+    /* Espaçamento interno */
+    padding: 15px 50px;
+
+    /* Remove a borda */
+    border: none;
+
+    /* Deixa o botão arredondado */
+    border-radius: 30px;
+
+    /* Gradiente roxo */
+    background: linear-gradient(
+        90deg,
+        #7b61ff,
+        #9f6fff
+    );
+
+    /* Cor do texto */
+    color: white;
+
+    /* Tamanho do texto */
+    font-size: 20px;
+
+    /* Cursor de mão */
+    cursor: pointer;
+
+    /* Animação */
+    transition: 0.2s;
+}
+
+
+/* Efeito ao passar o mouse */
+.btn-iniciar:hover {
+
+    /* Move o botão levemente para cima */
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ESTATÍSTICAS
+   ========================================================= */
+
+/* Área que contém os cards */
+.estatisticas {
+
+    /* Coloca os cards lado a lado */
+    display: flex;
+
+    /* Espaço entre os cards */
+    gap: 20px;
+
+    /* Espaço acima dos cards */
+    margin-top: 30px;
+}
+
+
+/* Cada card de estatística */
+.card {
+
+    /* Faz os cards dividirem o espaço igualmente */
+    flex: 1;
+
+    /* Cor do fundo */
+    background: #161b36;
+
+    /* Espaçamento interno */
+    padding: 25px;
+
+    /* Cantos arredondados */
+    border-radius: 15px;
+}
+
+
+/* Número dentro dos cards */
+.card p {
+
+    /* Tamanho do número */
+    font-size: 28px;
+
+    /* Deixa o número em negrito */
+    font-weight: bold;
+
+    /* Espaço acima */
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   ÁREA DE TAREFAS
+   ========================================================= */
+
+.tarefas {
+
+    /* Largura da área de tarefas */
+    width: 350px;
+
+    /* Cor do fundo */
+    background: #11152d;
+
+    /* Espaçamento interno */
+    padding: 30px;
+}
+
+
+/* Título das tarefas */
+.tarefas h2 {
+
+    /* Espaço abaixo do título */
+    margin-bottom: 8px;
+}
+
+
+/* Texto abaixo do título */
+.tarefas-subtitulo {
+
+    /* Cor mais fraca */
+    color: #858eaf;
+
+    /* Tamanho da fonte */
+    font-size: 13px;
+
+    /* Espaço abaixo */
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   CADA TAREFA
+   ========================================================= */
+
+.tarefa {
+
+    /* Espaçamento vertical */
+    padding: 18px 5px;
+
+    /* Linha separando as tarefas */
+    border-bottom: 1px solid #2c335f;
+
+    /* Organiza checkbox e texto lado a lado */
+    display: flex;
+
+    /* Alinha verticalmente */
+    align-items: center;
+
+    /* Espaço entre checkbox e texto */
+    gap: 10px;
+
+    /* Cor do texto */
+    color: #e1e4f2;
+}
+
+
+/* Checkbox da tarefa */
+.tarefa input {
+
+    /* Largura */
+    width: 17px;
+
+    /* Altura */
+    height: 17px;
+
+    /* Cor do checkbox */
+    accent-color: #7b61ff;
+
+    /* Cursor de mão */
+    cursor: pointer;
+}
+
+
+/* Texto da tarefa */
+.tarefa span {
+
+    /* Tamanho do texto */
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   TAREFA CONCLUÍDA
+   ========================================================= */
+
+/* Quando a tarefa possui a classe "concluida" */
+.tarefa.concluida span {
+
+    /* Deixa o texto mais apagado */
+    color: #737b9c;
+
+    /* Risca o texto */
+    text-decoration: line-through;
+}
+
+
+/* =========================================================
+   BOTÃO NOVA TAREFA
+   ========================================================= */
+
+.nova-tarefa {
+
+    /* Ocupa toda a largura */
+    width: 100%;
+
+    /* Espaço acima */
+    margin-top: 25px;
+
+    /* Espaçamento interno */
+    padding: 14px;
+
+    /* Organiza o conteúdo lado a lado */
+    display: flex;
+
+    /* Alinha verticalmente */
+    align-items: center;
+
+    /* Espaço entre o + e o texto */
+    gap: 12px;
+
+    /* Cor de fundo */
+    background: #161b36;
+
+    /* Borda tracejada */
+    border: 1px dashed #4b5680;
+
+    /* Cantos arredondados */
+    border-radius: 12px;
+
+    /* Cor do texto */
+    color: white;
+
+    /* Alinha o texto à esquerda */
+    text-align: left;
+
+    /* Cursor de mão */
+    cursor: pointer;
+
+    /* Animação */
+    transition: 0.2s;
+}
+
+
+/* Efeito quando passa o mouse */
+.nova-tarefa:hover {
+
+    /* Muda o fundo */
+    background: #20294b;
+
+    /* Muda a cor da borda */
+    border-color: #7b61ff;
+
+    /* Move um pouco para cima */
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ÍCONE + DA NOVA TAREFA
+   ========================================================= */
+
+.nova-tarefa .mais {
+
+    /* Largura */
+    width: 38px;
+
+    /* Altura */
+    height: 38px;
+
+    /* Cantos arredondados */
+    border-radius: 9px;
+
+    /* Gradiente roxo */
+    background: linear-gradient(
+        135deg,
+        #7b61ff,
+        #9f6fff
+    );
+
+    /* Centraliza o + */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Tamanho do + */
+    font-size: 23px;
+}
+
+
+/* =========================================================
+   TEXTO DA NOVA TAREFA
+   ========================================================= */
+
+/* Título "Nova tarefa" */
+.nova-tarefa strong {
+
+    /* Coloca o texto em sua própria linha */
+    display: block;
+
+    /* Tamanho da fonte */
+    font-size: 14px;
+}
+
+
+/* Texto menor abaixo */
+.nova-tarefa small {
+
+    /* Coloca em uma nova linha */
+    display: block;
+
+    /* Espaço acima */
+    margin-top: 4px;
+
+    /* Cor mais fraca */
+    color: #858eaf;
+
+    /* Tamanho */
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   BOTÃO REINICIAR
+   ========================================================= */
+
+.btn-reiniciar {
+
+    /* Espaçamento interno */
+    padding: 15px 25px;
+
+    /* Borda */
+    border: 1px solid #363e65;
+
+    /* Deixa o botão arredondado */
+    border-radius: 30px;
+
+    /* Fundo transparente */
+    background: transparent;
+
+    /* Cor do texto */
+    color: #c9cde0;
+
+    /* Tamanho da fonte */
+    font-size: 16px;
+
+    /* Cursor de mão */
+    cursor: pointer;
+
+    /* Animação */
+    transition: 0.2s;
+}
+
+
+/* =========================================================
+   EFEITO DO BOTÃO REINICIAR
+   ========================================================= */
+
+.btn-reiniciar:hover {
+
+    /* Muda a cor do fundo */
+    background: #252c50;
+
+    /* Muda a cor da borda */
+    border-color: #7b61ff;
+
+    /* Deixa o texto branco */
+    color: white;
+
+    /* Move o botão um pouco para cima */
+    transform: translateY(-2px);
+}

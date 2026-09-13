@@ -1,82 +1,218 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Pomodoro Flow</title>
+
     <link rel="stylesheet" href="promodoro.css">
 </head>
+
 <body>
 
+    <!-- MENU LATERAL -->
     <aside class="sidebar">
-        <h2> Pomodoro Flow</h2>
 
-     
+        <h2>Pomodoro Flow</h2>
+
         <ul>
-            <li class="ativo"> Timer</li>
-            <li> Tarefas</li>
-            <li> Notas</li>
-            <li> Histórico</li>
+            <li class="ativo">🕐 Timer</li>
+            <li>✅ Tarefas</li>
+            <li>📝 Notas</li>
+            <li>📊 Histórico</li>
+            <li>⚙️ Configurações</li>
         </ul>
-    </aside>
 
-    <main class="conteudo">
-        <h1>Em que vamos focar agora?</h1>
+        <div class="perfil">
 
-        <div class="timer-box">
-            <div class="abas">
-                <button>Foco</button>
-                <button>Pausa </button>
-                <button>Pausa</button>
-            </div>
-
-            <h2>00:00</h2>
-
-            <button class="btn-iniciar">
-                ▶ Iniciar foco
-            </button>
-        </div>
-
-        <div class="estatisticas">
-            <div class="card">
-                <h3>Foco hoje</h3>
-                <p>1h 40min</p>
-            </div>
-
-            <div class="card">
-                <h3>Sessões</h3>
-                <p>4</p>
-            </div>
-
-            <div class="card">
-                <h3>Meta diária</h3>
-                <p>2h</p>
-            </div>
-        </div>
-    </main>
-
-    <aside class="tarefas">
-        <h2>Atividades de hoje</h2>
-
-        <div class="tarefa">
-            <input type="checkbox">
-            Revisar JavaScript
-        </div>
-
-        <div class="tarefa">
-            <input type="checkbox">
-            Exercícios de lógica
-        </div>
-
-        <div class="tarefa">
-            <input type="checkbox">
-            Ler capítulo 3
-        </div>
-
-        
+    <div class="avatar">
+        👤
     </div>
 
+    <div class="dados-usuario">
+        <strong>Mateus</strong>
+        <span>Foco em progresso</span>
+    </div>
+
+</div>
+
+<button class="btn-sair">
+    🚪 Sair da conta
+</button>
+
     </aside>
 
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudo">
+
+        <h1>Em que vamos focar agora?</h1>
+
+        <!-- TIMER -->
+        <div class="timer-box">
+
+            <div class="abas">
+
+                <button class="aba ativa">
+                    🔥 Foco
+                </button>
+
+                <button class="aba">
+                    ☕ Pausa curta
+                </button>
+
+                <button class="aba">
+                    💤 Pausa longa
+                </button>
+
+            </div>
+
+            <!-- CÍRCULO DO TIMER -->
+            <div class="timer-circulo">
+
+                <div class="timer-conteudo">
+
+                    <span class="status-timer">
+                        TEMPO DE FOCO
+                    </span>
+
+                    <h2>25:00</h2>
+
+                </div>
+
+            </div>
+
+            <!-- BOTÕES -->
+            <div class="botoes-timer">
+
+                <button class="btn-iniciar">
+                    ▶ Iniciar foco
+                </button>
+
+             <div class="botoes-timer">
+
+   
+    <button class="btn-reiniciar">
+        ↻ Reiniciar
+    </button>
+</div>
+
+            </div>
+
+        </div>
+
+        <!-- ESTATÍSTICAS -->
+        <div class="estatisticas">
+
+            <div class="card">
+
+                <div class="icone-card">
+                    🎯
+                </div>
+
+                <div>
+                    <h3>Foco hoje</h3>
+                    <p>1h 40min</p>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icone-card">
+                    ⏱️
+                </div>
+
+                <div>
+                    <h3>Sessões</h3>
+                    <p>4 sessões</p>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icone-card">
+                    🏆
+                </div>
+
+                <div class="meta">
+
+                    <h3>Meta diária</h3>
+
+                    <p>
+                        1h 40min
+                        <span>/ 2h</span>
+                    </p>
+
+                    <div class="barra">
+                        <div class="progresso"></div>
+                    </div>
+
+                    <small>80% concluído</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- TAREFAS -->
+    <aside class="tarefas">
+
+        <div class="titulo-tarefas">
+
+            <div>
+                <h2>Atividades de hoje</h2>
+                <p>2 de 3 concluídas</p>
+            </div>
+
+            <button class="btn-add">+</button>
+
+        </div>
+
+
+        <div class="tarefa concluida">
+
+            <input type="checkbox" checked>
+
+            <span>Revisar JavaScript </span>
+
+        </div>
+
+
+        <div class="tarefa">
+
+            <input type="checkbox">
+
+            <span>Exercícios de lógica</span>
+
+        </div>
+
+
+        <div class="tarefa concluida">
+
+            <input type="checkbox" checked>
+
+            <span>Ler capítulo 3</span>
+
+        </div>
+
+
+        <button class="nova-tarefa">
+            + Nova tarefa
+        </button>
+
+    </aside>
+
+
 </body>
+
 </html>
