@@ -1,0 +1,28 @@
+{
+  "name": "summit-umc",
+  "version": "1.0.0",
+  "description": "criação do site pomodoro \r #\u0000 \u0000S\u0000U\u0000M\u0000M\u0000I\u0000T\u0000-\u0000U\u0000M\u0000C\u0000-\u00000\u00000\u00001\u0000\r\u0000 \u0000",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MateusGiorgio/SUMMIT-UMC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MateusGiorgio/SUMMIT-UMC/issues"
+  },
+  "homepage": "https://github.com/MateusGiorgio/SUMMIT-UMC#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.23.0"
+  }
+}
