@@ -36,6 +36,12 @@ body {
     transition: 0.2s;
 }
 
+.sidebar li a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
 .sidebar li:hover {
     background: #192143;
 }
