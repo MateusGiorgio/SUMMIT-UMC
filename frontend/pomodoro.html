@@ -27,20 +27,20 @@
 
         <div class="perfil">
 
-    <div class="avatar">
-        👤
-    </div>
+            <div class="avatar">
+                👤
+            </div>
 
-    <div class="dados-usuario">
-        <strong>Mateus</strong>
-        <span>Foco em progresso</span>
-    </div>
+            <div class="dados-usuario">
+                <strong class="nome-usuario">Visitante</strong>
+                <span>Foco em progresso</span>
+            </div>
 
-</div>
-    <!botao de saida ! mt arrumar>
-<button class="btn-sair">
-    🚪 Sair da conta
-</button>
+        </div>
+
+        <button class="btn-sair">
+            🚪 Sair da conta
+        </button>
 
     </aside>
 
@@ -83,22 +83,10 @@
                 </div>
 
             </div>
-
             <!-- BOTÕES -->
             <div class="botoes-timer">
-
-                <button class="btn-iniciar">
-                    ▶ Iniciar foco
-                </button>
-
-             <div class="botoes-timer">
-
-   
-    <button class="btn-reiniciar">
-        ↻ Reiniciar
-    </button>
-</div>
-
+                <button class="btn-iniciar">▶ Iniciar foco</button>
+                <button class="btn-reiniciar">↻ Reiniciar</button>
             </div>
 
         </div>
@@ -114,7 +102,7 @@
 
                 <div>
                     <h3>Foco hoje</h3>
-                    <p>1h 40min</p>
+                    <p class="tempo-focado">0min</p>
                 </div>
 
             </div>
@@ -128,7 +116,7 @@
 
                 <div>
                     <h3>Sessões</h3>
-                    <p>4 sessões</p>
+                    <p class="total-sessoes">0 sessões</p>
                 </div>
 
             </div>
@@ -141,20 +129,16 @@
                 </div>
 
                 <div class="meta">
-
                     <h3>Meta diária</h3>
-
-                    <p>
-                        1h 40min
-                        <span>/ 2h</span>
-                    </p>
+                    <label for="meta-minutos">Sua meta em minutos</label>
+                    <input id="meta-minutos" type="number" min="1" max="1440" value="120">
+                    <p><span class="tempo-meta">0h 0min</span> <span class="valor-meta">/ 2h</span></p>
 
                     <div class="barra">
                         <div class="progresso"></div>
                     </div>
 
-                    <small>80% concluído</small>
-
+                    <small class="percentual-meta">0% concluído</small>
                 </div>
 
             </div>
@@ -165,54 +149,19 @@
 
 
     <!-- TAREFAS -->
-    <aside class="tarefas">
+    <aside class="tarefas recolhida">
+        <button class="alternar-tarefas" type="button" aria-label="Abrir tarefas" aria-expanded="false">📋</button>
+        <button class="nova-tarefa">+ Nova tarefa</button>
+        <p class="resumo-tarefas">0 de 0 concluídas</p>
+        <form class="form-tarefa" hidden>
+            <input type="text" placeholder="Digite uma tarefa" aria-label="Nova tarefa" required>
+            <button type="submit">Adicionar</button>
+        </form>
 
-        <div class="titulo-tarefas">
-
-            <div>
-                <h2>Atividades de hoje</h2>
-                <p>2 de 3 concluídas</p>
-            </div>
-
-            <button class="btn-add">+</button>
-
-        </div>
-
-
-        <div class="tarefa concluida">
-
-            <input type="checkbox" checked>
-
-            <span>Revisar JavaScript </span>
-
-        </div>
-
-
-        <div class="tarefa">
-
-            <input type="checkbox">
-
-            <span>Exercícios de lógica</span>
-
-        </div>
-
-
-        <div class="tarefa concluida">
-
-            <input type="checkbox" checked>
-
-            <span>Ler capítulo 3</span>
-
-        </div>
-
-
-        <button class="nova-tarefa">
-            + Nova tarefa
-        </button>
-
+        <div class="lista-tarefas"></div>
     </aside>
 
-
+    <script src="pomodoro.js"></script>
 </body>
 
 </html>
